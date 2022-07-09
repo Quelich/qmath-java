@@ -31,6 +31,10 @@ tasks.named('jar') {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.4.2'
+}
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
