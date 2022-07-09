@@ -4,7 +4,26 @@
 package qmath;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    
+    /*
+     * Checks if the given number is an even number
+     */
+    public boolean isEven(int n)
+    {
+        return n % 2 == 0;
+    }
+    
+    /*
+     * add two integers - overloading
+     */
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    /*
+     * add two float numbers - overloding
+     */
+    public float add(float a, float b) {
+        return a + b;
     }
 }

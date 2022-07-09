@@ -7,9 +7,28 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+
+
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
+
+}
+
+version = '0.1.1'
+
+java {
+
+    withSourcesJar()
+
+    withJavadocJar()
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                   'Implementation-Version': project.version)
+    }
 }
 
 repositories {
